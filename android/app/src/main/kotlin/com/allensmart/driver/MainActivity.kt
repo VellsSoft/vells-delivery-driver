@@ -1,4 +1,4 @@
-package com.example.delivery_boy
+package com.allensmart.driver
 
 import io.flutter.embedding.android.FlutterActivity
 

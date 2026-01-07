@@ -9,7 +9,7 @@ workflows:
       groups:
         - google_play
       vars:
-        PACKAGE_NAME: "com.vellssoft.delivery_boy"
+        PACKAGE_NAME: "com.allensmart.driver"
       flutter: stable
       xcode: latest
       cocoapods: default
@@ -58,7 +58,7 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.vellssoft.deliveryboy
+        bundle_identifier: com.allensmart.driver
       vars:
         APP_STORE_APPLE_ID: 1234567890
       flutter: stable
