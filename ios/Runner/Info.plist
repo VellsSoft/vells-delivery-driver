@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Delivery Boy</string>
+	<string>Vells Delivery</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>delivery_boy</string>
+	<string>Vells Delivery</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -45,5 +45,18 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- Location Permissions -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to track deliveries and provide accurate navigation to delivery addresses.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location to track deliveries even when the app is in the background, ensuring accurate delivery tracking.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to track deliveries and update your position for real-time delivery tracking.</string>
+	<!-- Camera Permission (for proof of delivery) -->
+	<key>NSCameraUsageDescription</key>
+	<string>We need camera access to capture proof of delivery photos.</string>
+	<!-- Photo Library Permission -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to your photo library to attach delivery photos.</string>
 </dict>
 </plist>
