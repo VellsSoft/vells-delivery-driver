@@ -184,6 +184,31 @@ dependencies:
 - Verify Google Maps API key is configured
 - Check GPS is enabled
 
+## 🔄 CI/CD with Codemagic
+
+This project is configured for automated builds using Codemagic.
+
+### Quick Setup
+1. Sign up at [Codemagic](https://codemagic.io/signup)
+2. Connect your GitHub repository
+3. Codemagic will auto-detect `codemagic.yaml`
+4. Start your first build!
+
+### Available Workflows
+- **Android**: Builds release APK (~10-15 min)
+- **iOS**: Builds IPA for App Store (~15-20 min)
+- **Web**: Builds web app (~5-10 min)
+- **Windows**: Builds Windows executable (~10-15 min)
+
+### Documentation
+- See `CODEMAGIC_QUICK_START.md` for 3-minute setup
+- See `CODEMAGIC_SETUP.md` for detailed guide
+
+### Free Tier
+- 500 build minutes/month
+- All platforms supported
+- Perfect for this project!
+
 ## 🚀 Deployment
 
 ### Android (APK/AAB)
