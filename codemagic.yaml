@@ -65,6 +65,9 @@ workflows:
       xcode: latest
       cocoapods: default
     scripts:
+      - name: Initialize keychain for code signing
+        script: | 
+          keychain initialize
       - name: Set up code signing settings on Xcode project
         script: | 
           xcode-project use-profiles
@@ -83,7 +86,15 @@ workflows:
         ignore_failure: true
       - name: Build ipa for distribution
         script: | 
+          # Get the latest build number from TestFlight and increment it
+          LATEST_BUILD=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" || echo "0")
+          BUILD_NUMBER=$((LATEST_BUILD + 1))
+          echo "Latest TestFlight build: $LATEST_BUILD"
+          echo "New build number: $BUILD_NUMBER"
+          
           flutter build ipa --release \
+            --build-name=1.0.0 \
+            --build-number=$BUILD_NUMBER \
             --export-options-plist=/Users/builder/export_options.plist
     artifacts:
       - build/ios/ipa/*.ipa
